@@ -7,15 +7,17 @@
 
 ARISTOTLE_MODULES_PATH := device/xiaomi/aristotle/prebuilt/modules
 
-ARISTOTLE_RECOVERY_TOUCH_MODULES := \
-    $(ARISTOTLE_MODULES_PATH)/vendor_dlkm/xiaomi_touch.ko \
-    $(ARISTOTLE_MODULES_PATH)/vendor_dlkm/goodix_core.ko
+# Bit-exact display/touch dependency closure extracted from the Aristotle HOS2
+# vendor_boot ramdisk. Keep this separate from vendor_dlkm: these modules are
+# needed before vendor_dlkm is mounted and by recovery.
+ARISTOTLE_VENDOR_RAMDISK_MODULES_PATH := $(ARISTOTLE_MODULES_PATH)/vendor_ramdisk
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := \
-    $(ARISTOTLE_RECOVERY_TOUCH_MODULES)
+    $(wildcard $(ARISTOTLE_VENDOR_RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(ARISTOTLE_VENDOR_RAMDISK_MODULES_PATH)/modules.load 2>/dev/null))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := \
-    xiaomi_touch.ko \
-    goodix_core.ko
+    $(strip $(shell cat $(ARISTOTLE_VENDOR_RAMDISK_MODULES_PATH)/modules.load.recovery 2>/dev/null))
 BOARD_DO_NOT_STRIP_VENDOR_RAMDISK_MODULES := true
 
 BOARD_VENDOR_KERNEL_MODULES := \
