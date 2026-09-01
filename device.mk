@@ -75,7 +75,8 @@ PRODUCT_PACKAGES += \
 
 # Network
 PRODUCT_PACKAGES += \
-    com.android.hardware.net.nlinterceptor
+    com.android.hardware.net.nlinterceptor \
+    libwifi-hal-wrapper
 
 # Sensor, Vibrator, IFAA & Power
 PRODUCT_PACKAGES += \
