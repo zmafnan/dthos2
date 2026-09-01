@@ -473,17 +473,6 @@ vendor/bin/xxd
 vendor/bin/yes
 vendor/bin/zcat
 vendor/data/model/AIHDR.dla
-vendor/data/model/SR144*256.dla
-vendor/data/model/SR240*432.dla
-vendor/data/model/SR270*480.dla
-vendor/data/model/SR360*640.dla
-vendor/data/model/SR376*896.dla
-vendor/data/model/SR450*800.dla
-vendor/data/model/SR480*864.dla
-vendor/data/model/SR486*864.dla
-vendor/data/model/SR504*896.dla
-vendor/data/model/SR540*960.dla
-vendor/data/model/SR720*1280.dla
 vendor/data/model/scene_detection.dla
 vendor/etc/1-SN1X0_SPC.txt
 vendor/etc/AbnormalDisplayLog_dynamic.xml
