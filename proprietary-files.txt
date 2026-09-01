@@ -9,9 +9,7 @@ odm/etc/camera/camerabooster.json
 odm/etc/cit_param_config.json
 odm/etc/default_cloud.json
 odm/etc/device_info_qr_config.yml
-odm/etc/group
 odm/etc/init/mrm_mitee.rc
-odm/etc/passwd
 odm/etc/setting.xml
 odm/lib/libhdrmode.so
 odm/lib/libmiriskmanager_mitee.so
@@ -70,8 +68,6 @@ vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
 vendor/bin/batterysecret
 vendor/bin/bip_ap
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/bt_dump
 vendor/bin/cameratest
 vendor/bin/capture.sh
@@ -184,7 +180,6 @@ vendor/bin/hw/vendor.xiaomi.sensor.communicate@1.0-service
 vendor/bin/hw/vtservice_hidl
 vendor/bin/init.insmod.sh
 vendor/bin/ioprofiler
-vendor/bin/iperf
 vendor/bin/ipsec_mon
 vendor/bin/iw-vendor
 vendor/bin/iwconfig
@@ -243,7 +238,6 @@ vendor/bin/smartcharging
 vendor/bin/smartpa_nvtest
 vendor/bin/soterd
 vendor/bin/stp_dump3
-vendor/bin/tcpdump-vendor
 vendor/bin/teardown_loopback.sh
 vendor/bin/tee-supplicant
 vendor/bin/testgameserver
@@ -603,7 +597,6 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_T-Mobile_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
-vendor/etc/group
 vendor/etc/hrtf5c.bin
 vendor/etc/init.insmod.mt6895.cfg
 vendor/etc/init.panel_info.sh
@@ -835,7 +828,6 @@ vendor/etc/nn/ot/neuron_detection.mdla3_0
 vendor/etc/nn/ot/neuron_tracking.mdla3_0
 vendor/etc/nnapi_powerhal.json
 vendor/etc/partition_permission.sh
-vendor/etc/passwd
 vendor/etc/permissions/android.hardware.audio.low_latency.xml
 vendor/etc/permissions/android.hardware.bluetooth_le.xml
 vendor/etc/permissions/android.hardware.camera.xml
@@ -885,7 +877,6 @@ vendor/etc/permissions/com.android.nfc_extras.xml
 vendor/etc/permissions/com.mediatek.hardware.vow.xml
 vendor/etc/permissions/com.mediatek.hardware.vow_dsp.xml
 vendor/etc/permissions/com.nxp.mifare.xml
-vendor/etc/permissions/handheld_core_hardware.xml
 vendor/etc/permissions/vendor.xiaomi.sensor.citsensorservice.xml
 vendor/etc/power_app_cfg.xml
 vendor/etc/powercontable.xml
