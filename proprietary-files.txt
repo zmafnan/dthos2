@@ -129,8 +129,6 @@ vendor/bin/hw/android.hardware.drm@1.4-service.clearkey
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.xiaomi
 vendor/bin/hw/android.hardware.gnss-service.mediatek
-vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
-vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895
 vendor/bin/hw/android.hardware.lights-service.mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
@@ -143,7 +141,7 @@ vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/hw/camerahalserver
 vendor/bin/hw/mfp-daemon
-vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895
+vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/mt6895/camerahalserver
 vendor/bin/hw/mtkfusionrild
 vendor/bin/hw/tetheroffloadservice
