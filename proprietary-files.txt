@@ -856,7 +856,6 @@ vendor/etc/security/cacerts_supl/lab/b5805141.0
 vendor/etc/security/cacerts_supl/lab/b805b58a.0
 vendor/etc/security/cacerts_supl/lab/ed7b215e.0
 vendor/etc/security/cacerts_supl/lab/ef4b31e6.0
-vendor/etc/selinux/selinux_denial_metadata
 vendor/etc/sensor_diag.cfg
 vendor/etc/sensors/lightSensorCali.json
 vendor/etc/sensors/lightSensorConfig.json
@@ -1586,7 +1585,6 @@ vendor/lib/shared-file-region-aidl-cpp.so
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/soundfx/libdlbvol_3_8_5.so
 vendor/lib/soundfx/libmisoundfx.so
-vendor/lib/soundfx/libspatializer.so
 vendor/lib/soundfx/libswdap_3_8_5.so
 vendor/lib/soundfx/libswgamedap_3_8_5.so
 vendor/lib/soundfx/libswspatializer_3_8_5.so
@@ -2455,7 +2453,6 @@ vendor/lib64/shared-file-region-aidl-cpp.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdlbvol_3_8_5.so
 vendor/lib64/soundfx/libmisoundfx.so
-vendor/lib64/soundfx/libspatializer.so
 vendor/lib64/soundfx/libswdap_3_8_5.so
 vendor/lib64/soundfx/libswgamedap_3_8_5.so
 vendor/lib64/soundfx/libswspatializer_3_8_5.so
