@@ -7,7 +7,7 @@
 
 ARISTOTLE_MODULES_PATH := device/xiaomi/aristotle/prebuilt/modules
 
-# Bit-exact display/touch dependency closure extracted from the Aristotle HOS2
+# Complete bit-exact platform module set extracted from the Aristotle HOS2
 # vendor_boot ramdisk. Keep this separate from vendor_dlkm: these modules are
 # needed before vendor_dlkm is mounted and by recovery.
 ARISTOTLE_VENDOR_RAMDISK_MODULES_PATH := $(ARISTOTLE_MODULES_PATH)/vendor_ramdisk
