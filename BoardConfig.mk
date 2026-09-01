@@ -117,6 +117,12 @@ TARGET_RECOVERY_DENSITY := xxhdpi
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 
+# SELinux policy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # VINTF Manifests
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest.xml \
