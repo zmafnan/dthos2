@@ -1398,7 +1398,6 @@ vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib/hw/android.hardware.boot@1.0-impl-1.2-mtkimpl.so
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib/hw/audio.primary.mt6895.so
 vendor/lib/hw/audio.r_submix.mediatek.so
@@ -1701,8 +1700,6 @@ vendor/lib/libpq_prot.so;SYMLINK=vendor/lib/mt6895/libpq_prot.so
 vendor/lib/libpqframework.so
 vendor/lib/libpqparamparser.so;SYMLINK=vendor/lib/mt6895/libpqparamparser.so
 vendor/lib/libpqpconfig.so;SYMLINK=vendor/lib/mt6895/libpqpconfig.so
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib/librcs_interface.so
 vendor/lib/librcs_volte_core.so
 vendor/lib/librgbwlightsensor.so
@@ -1913,7 +1910,6 @@ vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6895.so
@@ -2113,7 +2109,6 @@ vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbluetooth_relayer.so
 vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbwc.so
-vendor/lib64/libc++_shared.so
 vendor/lib64/libcam.3a_isp.utils.so;SYMLINK=vendor/lib64/mt6895/libcam.3a_isp.utils.so
 vendor/lib64/libcam.afmgr.so;SYMLINK=vendor/lib64/mt6895/libcam.afmgr.so
 vendor/lib64/libcam.chdr.so;SYMLINK=vendor/lib64/mt6895/libcam.chdr.so
@@ -2582,8 +2577,6 @@ vendor/lib64/libpq_prot.so;SYMLINK=vendor/lib64/mt6895/libpq_prot.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqparamparser.so;SYMLINK=vendor/lib64/mt6895/libpqparamparser.so
 vendor/lib64/libpqpconfig.so;SYMLINK=vendor/lib64/mt6895/libpqpconfig.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib64/libratconfig.so
 vendor/lib64/librelight_only.so
 vendor/lib64/libremosaic_wrapper.so
