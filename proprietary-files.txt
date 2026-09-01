@@ -480,7 +480,7 @@ vendor/etc/camera/ellv.bin
 vendor/etc/camera/ellv_params.xml
 vendor/etc/camera/facesr_hd_composite_ref_4.5.10_mtkg610_apu_segapu_partblock_qualityv47r3.model
 vendor/etc/camera/fold_qianzhi_512_edutpu140_ar36912_depth128_dd48_2_128_inscale_q12qrqfct_rotate45_scale_distortcolor_quantaware_step205420_without_softmax_mdla30.dla
-vendor/etc/camera/gma_custom.xml
+vendor/etc/camera/gma_custom.xml;EXTRACT_ONLY
 vendor/etc/camera/ldc/AI_Seg.bin
 vendor/etc/camera/ldc/LDC_FRONT_FPC_TUNING.bin
 vendor/etc/camera/ldc/LDC_FRONT_FPC_TUNING_AI.bin
