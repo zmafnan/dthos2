@@ -33,6 +33,23 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 33554432
 
+# A/B OTA partitions
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    odm \
+    odm_dlkm \
+    product \
+    system \
+    system_dlkm \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor \
+    vendor_boot \
+    vendor_dlkm
+
 # Dynamic Partitions (Super: 9.6 GB)
 BOARD_SUPER_PARTITION_SIZE := 9663676416
 BOARD_SUPER_PARTITION_GROUPS := main
