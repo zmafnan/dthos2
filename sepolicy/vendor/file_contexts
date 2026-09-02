@@ -154,9 +154,8 @@
 # Ir
 /dev/ir_spi                                                               u:object_r:vendor_ir_spi_device:s0
 
-# Android 16 MiTEE KeyMint. The common MTK policy only labels the older
-# @3.0 filename; Aristotle stock ships the @4.0 provider under this path.
-/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint@4\.0-service\.mitee u:object_r:hal_keymint_default_exec:s0
+# MiTEE KeyMint providers used by the HOS2 and HOS3 vendor baselines.
+/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint@(1|4)\.0-service\.mitee u:object_r:hal_keymint_default_exec:s0
 
 # Mfidoca
 /vendor/bin/fidoca_isee                                                   u:object_r:hal_mfidoca_default_exec:s0

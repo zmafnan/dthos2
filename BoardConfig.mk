@@ -157,6 +157,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 # VINTF Manifests
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.security.keymint-service.mitee.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.security.secureclock-service.mitee.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.security.sharedsecret-service.mitee.xml \
     $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
