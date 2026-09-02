@@ -1,12 +1,12 @@
 system /system erofs ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 system /system ext4 ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 
-vendor /vendor erofs ro wait,slotselect,avb,logical,first_stage_mount
-vendor /vendor ext4 ro wait,slotselect,avb,logical,first_stage_mount
+vendor /vendor erofs ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
+vendor /vendor ext4 ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 
 
-product /product erofs ro wait,slotselect,avb,logical,first_stage_mount
-product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
+product /product erofs ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
+product /product ext4 ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 mi_ext /mnt/vendor/mi_ext erofs ro wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
 mi_ext /mnt/vendor/mi_ext ext4 ro wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
 /mnt/vendor/mi_ext /mi_ext erofs ro,bind wait,nofail
@@ -40,14 +40,14 @@ overlay /system_ext/etc/permissions overlay ro,lowerdir=/mnt/vendor/mi_ext/syste
 system_ext /system_ext erofs ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 system_ext /system_ext ext4 ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 
-odm /odm erofs ro wait,slotselect,avb,logical,first_stage_mount
-odm /odm ext4 ro wait,slotselect,avb,logical,first_stage_mount
+odm /odm erofs ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
+odm /odm ext4 ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 
 
-vendor_dlkm /vendor_dlkm erofs ro wait,slotselect,avb,logical,first_stage_mount
+vendor_dlkm /vendor_dlkm erofs ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 
 
-odm_dlkm /odm_dlkm erofs ro wait,slotselect,avb,logical,first_stage_mount
+odm_dlkm /odm_dlkm erofs ro wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 
 system_dlkm /system_dlkm erofs ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 
