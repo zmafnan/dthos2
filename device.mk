@@ -56,14 +56,21 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
-# KeyMint compatibility libraries for the HOS2 vendor service
+# Stock HOS2 KeyMint ABI required by the Android 31 MiTEE service
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V3-ndk.vendor \
-    lib_android_keymaster_keymint_utils.vendor \
-    libcppbor_external.vendor \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor \
-    libkeymint.vendor
+    android.hardware.keymaster@3.0-v31 \
+    android.hardware.keymaster@4.0-v31 \
+    android.hardware.security.keymint-V1-ndk_platform-v31 \
+    android.hardware.security.secureclock-V1-ndk_platform-v31 \
+    android.hardware.security.sharedsecret-V1-ndk_platform-v31 \
+    lib_android_keymaster_keymint_utils-v31 \
+    libcppbor_external-v31 \
+    libcppcose_rkp-v31 \
+    libkeymaster_messages-v31 \
+    libkeymaster_portable-v31 \
+    libkeymint-v31 \
+    libpuresoftkeymasterdevice-v31 \
+    libsoft_attestation_cert-v31
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \

@@ -40,18 +40,13 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     "vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee": blob_fixup()
-    .replace_needed(
-        "android.hardware.security.keymint-V1-ndk_platform.so",
-        "android.hardware.security.keymint-V3-ndk.so",
-    )
-    .replace_needed(
-        "android.hardware.security.sharedsecret-V1-ndk_platform.so",
-        "android.hardware.security.sharedsecret-V1-ndk.so",
-    )
-    .replace_needed(
-        "android.hardware.security.secureclock-V1-ndk_platform.so",
-        "android.hardware.security.secureclock-V1-ndk.so",
-    ),
+    .replace_needed("android.hardware.keymaster@4.0.so", "android.hardware.keymaster@4.0-v31.so")
+    .replace_needed("lib_android_keymaster_keymint_utils.so", "lib_android_keymaster_keymint_utils-v31.so")
+    .replace_needed("libkeymaster_messages.so", "libkeymaster_messages-v31.so")
+    .replace_needed("libkeymaster_portable.so", "libkeymaster_portable-v31.so")
+    .replace_needed("libkeymint.so", "libkeymint-v31.so")
+    .replace_needed("libcppbor_external.so", "libcppbor_external-v31.so")
+    .replace_needed("libcppcose_rkp.so", "libcppcose_rkp-v31.so"),
     (
         "vendor/etc/init/hw/init.batterysecret.rc",
         "vendor/etc/init/hw/init.mi_thermald.rc",
