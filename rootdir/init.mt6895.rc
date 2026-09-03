@@ -1,0 +1,7 @@
+# Mount the non-latemount vendor filesystems before services consume them.
+on fs
+    mount_all --early
+
+# Mount userdata and other entries marked latemount.
+on late-fs
+    mount_all --late
