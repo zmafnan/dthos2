@@ -1,7 +1,15 @@
 # Mount the non-latemount vendor filesystems before services consume them.
 on fs
     mount_all --early
+    write /mnt/vendor/persist/aristotle_boot_stage "fs-mounted-${ro.build.version.incremental}"
+
+on post-fs
+    write /mnt/vendor/persist/aristotle_boot_stage "post-fs-${ro.build.version.incremental}"
 
 # Mount userdata and other entries marked latemount.
 on late-fs
     mount_all --late
+    write /mnt/vendor/persist/aristotle_boot_stage "late-fs-${ro.build.version.incremental}"
+
+on post-fs-data
+    write /mnt/vendor/persist/aristotle_boot_stage "post-fs-data-${ro.build.version.incremental}"
