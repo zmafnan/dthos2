@@ -12,6 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
+# Enable insecure ADB during bringup
+WITH_ADB_INSECURE := true
+
 $(call inherit-product, device/xiaomi/aristotle/device.mk)
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
@@ -46,7 +49,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.marketname=Xiaomi 13T
 
-# Automatic ADB authorization for host PC
-PRODUCT_ADB_KEYS := device/xiaomi/aristotle/configs/adb_keys
-PRODUCT_PACKAGES += adb_keys
 
