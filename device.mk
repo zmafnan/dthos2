@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
+# Graphics composer service for the stock HIDL HWC implementation
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.3-service
+
 # Stock HOS2 KeyMint ABI required by the Android 31 MiTEE service
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-v31 \
@@ -97,7 +101,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint / UDFPS
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
-    libudfpshandler
+    libudfpshandler \
+    vendor.xiaomi.hardware.fx.tunnel@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
