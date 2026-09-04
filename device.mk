@@ -56,6 +56,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.lineage-libperfmgr \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+
 # Graphics composer service for the stock HIDL HWC implementation & Gralloc dependencies
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
