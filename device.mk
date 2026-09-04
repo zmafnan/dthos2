@@ -153,7 +153,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
     libudfpshandler \
-    vendor.xiaomi.hardware.fx.tunnel@1.0.vendor
+    vendor.xiaomi.hardware.fx.tunnel@1.0.vendor \
+    libhidltransport \
+    libhwbinder
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml

@@ -163,7 +163,6 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.security.sharedsecret-service.mitee.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/lights-mtk-default.xml \
-    $(DEVICE_PATH)/vintf/vendor/manifest/memtrack-mediatek.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/fod.xml \
     $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml

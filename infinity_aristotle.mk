@@ -45,3 +45,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.marketname=Xiaomi 13T
+
+# Insecure ADB for Bringup
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0
