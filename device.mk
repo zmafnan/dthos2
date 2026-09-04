@@ -56,9 +56,22 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
-# Graphics composer service for the stock HIDL HWC implementation
+# Graphics composer service for the stock HIDL HWC implementation & Gralloc dependencies
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.3-service
+    android.hardware.graphics.composer@2.3-service \
+    android.hardware.graphics.allocator@4.0.vendor \
+    android.hardware.graphics.common@1.0.vendor \
+    android.hardware.graphics.common@1.1.vendor \
+    android.hardware.graphics.common@1.2.vendor \
+    android.hardware.graphics.mapper@2.0.vendor \
+    android.hardware.graphics.mapper@2.1.vendor \
+    android.hardware.graphics.mapper@3.0.vendor \
+    android.hardware.graphics.mapper@4.0.vendor \
+    libgralloctypes.vendor \
+    libdmabufheap.vendor \
+    libdrm.vendor \
+    libion.vendor \
+    libbase_shim
 
 # Stock HOS2 KeyMint ABI required by the Android 31 MiTEE service
 PRODUCT_PACKAGES += \
@@ -93,10 +106,21 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     MtkInCallService
 
-# Network
+# Network & Radio
 PRODUCT_PACKAGES += \
     com.android.hardware.net.nlinterceptor \
-    libwifi-hal-wrapper
+    libwifi-hal-wrapper \
+    android.hardware.radio@1.0.vendor \
+    android.hardware.radio@1.1.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.1.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.config@1.3.vendor
 
 # Fingerprint / UDFPS
 PRODUCT_PACKAGES += \
@@ -136,6 +160,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.mt6895:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6895 \
     $(LOCAL_PATH)/rootdir/fstab.mt6895:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6895 \
     $(LOCAL_PATH)/rootdir/init.mt6895.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6895.rc \
+    $(LOCAL_PATH)/rootdir/init.mtkgki.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mtkgki.rc \
+    $(LOCAL_PATH)/rootdir/init.batterysecret.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.batterysecret.rc \
+    $(LOCAL_PATH)/rootdir/init.cgroup.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.cgroup.rc \
+    $(LOCAL_PATH)/rootdir/init.connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.rc \
+    $(LOCAL_PATH)/rootdir/init.connectivity.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.common.rc \
+    $(LOCAL_PATH)/rootdir/init_conninfra.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init_conninfra.rc \
+    $(LOCAL_PATH)/rootdir/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi_thermald.rc \
+    $(LOCAL_PATH)/rootdir/init.sensor_2_0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.sensor_2_0.rc \
+    $(LOCAL_PATH)/rootdir/init.project.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.project.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.mt6895.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 

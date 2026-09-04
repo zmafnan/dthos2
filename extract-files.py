@@ -64,6 +64,12 @@ blob_fixups: blob_fixups_user_type = {
     .clear_symbol_version("AHardwareBuffer_lockPlanes")
     .clear_symbol_version("AHardwareBuffer_release")
     .clear_symbol_version("AHardwareBuffer_unlock"),
+    (
+        "vendor/lib/libnvram.so",
+        "vendor/lib/libsysenv.so",
+        "vendor/lib64/libnvram.so",
+        "vendor/lib64/libsysenv.so",
+    ): blob_fixup().add_needed("libbase_shim.so"),
     "system_ext/lib64/libimsma.so": blob_fixup().replace_needed(
         "libsink.so", "libsink-mtk.so"
     ),
