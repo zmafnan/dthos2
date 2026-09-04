@@ -196,7 +196,9 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
 
 # Kernel Modules
 include $(DEVICE_PATH)/modules.mk
