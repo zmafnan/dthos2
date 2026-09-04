@@ -2539,7 +2539,6 @@ vendor/lib64/vendor.qti.sla.service@1.0.so
 vendor/lib64/vendor.xiaomi.cit.wifi@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.cld@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mimd@1.0.so
