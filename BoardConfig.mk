@@ -158,6 +158,26 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Wi-Fi
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_HOSTAPD_DRIVER := NL80211
+WIFI_DRIVER_FW_PATH_PARAM := "/dev/wmtWifi"
+WIFI_DRIVER_FW_PATH_STA := "STA"
+WIFI_DRIVER_FW_PATH_AP := "AP"
+WIFI_DRIVER_FW_PATH_P2P := "P2P"
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wmtWifi"
+WIFI_DRIVER_STATE_ON := "1"
+WIFI_DRIVER_STATE_OFF := "0"
+WIFI_HAL_INTERFACE_COMBINATIONS := {{{STA}, 2}}
+WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{AP}, 2},}
+WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{AP}, 1}}
+WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{P2P}, 1}}
+WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{NAN}, 1}}
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WIFI_FEATURE_HOSTAPD_11AX := true
+WIFI_FEATURE_SUPPLICANT_11AX := true
+
 # VINTF Manifests
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest.xml \
@@ -168,7 +188,12 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/fod.xml \
-    $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml
+    $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/manifest_cameraprovider.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.usb@1.2-service-mediatekv2.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/gnss-default.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml \
+    $(DEVICE_PATH)/vintf/vendor/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml
