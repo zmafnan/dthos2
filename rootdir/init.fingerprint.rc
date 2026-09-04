@@ -4,7 +4,11 @@ on early-init
 on init
     setprop persist.vendor.fingerprint.type udfps_optical
 
+on property:ro.persistent_properties.ready=true
+    setprop persist.vendor.fingerprint.type udfps_optical
+
 on boot
+    setprop persist.vendor.fingerprint.type udfps_optical
     #GOODIX
     chmod 0660 /dev/goodix_fp
     chown system system /dev/goodix_fp
