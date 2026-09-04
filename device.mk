@@ -99,12 +99,33 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=erofs \
     POSTINSTALL_OPTIONAL_vendor=true
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@7.1-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.service \
+    audio.primary.default \
     audio.bluetooth.default \
     audio.usb.default \
     android.hardware.bluetooth.audio-impl \
     MtkInCallService
+
+# Camera HIDL for vibrator & misc vendor services
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.6.vendor \
+    android.hardware.camera.common@1.0.vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.frameworks.sensorservice@1.0.vendor
 
 # Network & Radio
 PRODUCT_PACKAGES += \
@@ -131,7 +152,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-# Sensor, Vibrator, IFAA & Power
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-subhal-impl-1.0 \
+    android.hardware.sensors-service.xiaomi-multihal \
+    sensors.xiaomi.v2 \
+    sensors.dynamic_sensor_hal
+
+# Vibrator, IFAA & Power
 PRODUCT_PACKAGES += \
     IFAAService \
     PowerOffAlarm \
@@ -169,6 +197,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi_thermald.rc \
     $(LOCAL_PATH)/rootdir/init.sensor_2_0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.sensor_2_0.rc \
     $(LOCAL_PATH)/rootdir/init.project.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.project.rc \
+    $(LOCAL_PATH)/rootdir/init.mt6895.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6895.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.fingerprint.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6895.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
