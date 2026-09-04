@@ -2,6 +2,10 @@
 # Evidence: extracted/system/system/build.prop
 # Generated build identity/API properties are intentionally excluded.
 
+ro.product.marketname=Xiaomi 13T
+ro.infinity.soc=Dimensity 8200 Ultra
+ro.infinity.camera=50MP + 50MP + 12MP
+
 vendor.rild.libpath=libmtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 wifi.interface=wlan0

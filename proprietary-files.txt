@@ -20,9 +20,9 @@ odm/lib64/libhdrmode.so
 odm/lib64/libmiriskmanager_mitee.so
 odm/lib64/vendor.xiaomi.hardware.misauth-V1-ndk_platform.so
 odm/lib64/vendor.xiaomi.hardware.mrm-V1-ndk_platform.so
-system_ext/bin/hw/android.hardware.audio.parameter_parser.service
+#system_ext/bin/hw/android.hardware.audio.parameter_parser.service
 system_ext/bin/vtservice
-system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc
+#system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc
 system_ext/etc/init/init.vtservice.rc
 system_ext/etc/sysconfig/com.mediatek.ims.config.xml
 system_ext/lib/vendor.mediatek.hardware.aee@1.0.so
@@ -49,7 +49,7 @@ system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 system_ext/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_system_ext
 vendor/bin/AgentTest
 vendor/bin/DFtool
 vendor/bin/FlashCompareAPI
@@ -155,7 +155,7 @@ vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+#vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
 vendor/bin/hw/vendor.qti.sla.service@1.0-service
 vendor/bin/hw/vendor.xiaomi.cit.wifi@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.cld@1.0-service
@@ -680,7 +680,7 @@ vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
+#vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/init/vendor.qti.sla.service@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.cit.wifi@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.cld@1.0-service.rc
@@ -1203,7 +1203,7 @@ vendor/lib/hw/audio.r_submix.mediatek.so
 vendor/lib/hw/audio.r_submix.mt6895.so
 vendor/lib/hw/consumerir.common.so
 vendor/lib/hw/displayfeature.default.so
-vendor/lib/hw/fingerprint.goodix_fod.so
+vendor/lib/hw/fingerprint.goodix_fod.so;SYMLINK=vendor/lib/hw/fingerprint.goodix_fod.default.so
 vendor/lib/hw/gatekeeper.default.so
 vendor/lib/hw/gatekeeper.mitee.so
 vendor/lib/hw/gps.default.so
@@ -1715,7 +1715,7 @@ vendor/lib64/hw/audio.r_submix.mediatek.so
 vendor/lib64/hw/audio.r_submix.mt6895.so
 vendor/lib64/hw/consumerir.common.so
 vendor/lib64/hw/displayfeature.default.so
-vendor/lib64/hw/fingerprint.goodix_fod.so
+vendor/lib64/hw/fingerprint.goodix_fod.so;SYMLINK=vendor/lib64/hw/fingerprint.goodix_fod.default.so
 vendor/lib64/hw/gatekeeper.default.so
 vendor/lib64/hw/gatekeeper.mitee.so
 vendor/lib64/hw/gps.default.so
