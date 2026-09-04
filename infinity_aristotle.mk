@@ -46,3 +46,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.marketname=Xiaomi 13T
 
+# Automatic ADB authorization for host PC
+PRODUCT_ADB_KEYS := device/xiaomi/aristotle/configs/adb_keys
+PRODUCT_PACKAGES += adb_keys
+

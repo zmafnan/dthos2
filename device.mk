@@ -209,7 +209,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.fingerprint.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6895.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
-    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    $(LOCAL_PATH)/configs/adb_keys:$(TARGET_COPY_OUT_PRODUCT)/etc/security/adb_keys \
+    $(LOCAL_PATH)/configs/adb_keys:$(TARGET_COPY_OUT_SYSTEM)/etc/security/adb_keys
 
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/aristotle/aristotle-vendor.mk)
