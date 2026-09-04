@@ -155,10 +155,17 @@ PRODUCT_PACKAGES += \
     libudfpshandler \
     vendor.xiaomi.hardware.fx.tunnel@1.0.vendor \
     libhidltransport \
-    libhwbinder
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor \
+    libion.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -213,3 +220,8 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/aristotle/aristotle-vendor.mk)
+
+# Filter out deprecated/broken vendor lights HAL inherited from aristotle-vendor.mk
+PRODUCT_PACKAGES := $(filter-out android.hardware.lights-service.mediatek,$(PRODUCT_PACKAGES))
+PRODUCT_COPY_FILES := $(filter-out %/lights-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-mtk-default.rc,$(PRODUCT_COPY_FILES))
+

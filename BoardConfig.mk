@@ -154,6 +154,10 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # VINTF Manifests
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest.xml \
@@ -162,7 +166,6 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.security.secureclock-service.mitee.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.security.sharedsecret-service.mitee.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml \
-    $(DEVICE_PATH)/vintf/vendor/manifest/lights-mtk-default.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/fod.xml \
     $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml

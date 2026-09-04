@@ -51,6 +51,7 @@ on boot
     chown system system /dev/xiaomi-fp
 
 on post-fs-data
+    setprop persist.vendor.fingerprint.type udfps_optical
     mkdir /data/vendor/misc 01771 system system
     mkdir /data/vendor/misc/mi_fp 0770 system system
     mkdir /persist/mi_fp 0770 system system

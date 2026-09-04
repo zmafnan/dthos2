@@ -129,7 +129,7 @@ vendor/bin/hw/android.hardware.drm@1.4-service.clearkey
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.xiaomi
 vendor/bin/hw/android.hardware.gnss-service.mediatek
-vendor/bin/hw/android.hardware.lights-service.mediatek
+#vendor/bin/hw/android.hardware.lights-service.mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
@@ -649,7 +649,7 @@ vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
-vendor/etc/init/lights-mtk-default.rc
+#vendor/etc/init/lights-mtk-default.rc
 vendor/etc/init/loghidlvendorservice.rc;EXTRACT_ONLY
 vendor/etc/init/mcfota_service.rc
 vendor/etc/init/md_monitor.rc;EXTRACT_ONLY
