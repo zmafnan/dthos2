@@ -11,6 +11,9 @@ import /vendor/etc/init/hw/init.fingerprint.rc
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.controller "11201000.usb0"
+    setprop persist.sys.usb.config adb
+    setprop sys.usb.config adb
+    setprop persist.vendor.fingerprint.type udfps_optical
 
     # Change lk_env permission
     chown root system /proc/lk_env
