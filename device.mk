@@ -59,7 +59,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor \
+    vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 # Graphics composer service for the stock HIDL HWC implementation & Gralloc dependencies
 PRODUCT_PACKAGES += \
@@ -110,6 +113,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # Audio
+$(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
@@ -123,7 +128,7 @@ PRODUCT_PACKAGES += \
     libnbaio_mono \
     libtinycompress \
     libalsautils-v31 \
-    libstagefright_foundation-v33 \
+    libstagefright_foundation-v33.vendor \
     audio.usb.default \
     android.hardware.bluetooth.audio-impl \
     MtkInCallService \
