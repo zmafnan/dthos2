@@ -404,7 +404,7 @@ $(call inherit-product, vendor/mediatek/ims/ims.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/aristotle/aristotle-vendor.mk)
 
 # USB
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
