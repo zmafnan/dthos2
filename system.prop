@@ -38,7 +38,7 @@ ro.audio.flinger_standbytime_ms=2000
 # -----------------------------------------------------------------------------
 # Camera Auxiliary Lens Allowlist
 # -----------------------------------------------------------------------------
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture,net.sourceforge.opencamera,com.google.android.GoogleCamera,com.xiaomi.cameratest,com.xiaomi.factory.mmi,com.xiaomi.runin
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera,net.sourceforge.opencamera,com.google.android.GoogleCamera
 
 # -----------------------------------------------------------------------------
 # USB & Storage Configuration
