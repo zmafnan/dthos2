@@ -187,6 +187,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0.vendor \
     android.hardware.usb@1.1.vendor \
     android.hardware.usb@1.2.vendor \
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.0.vendor \
+    android.hardware.usb.gadget@1.1.vendor \
+    android.hardware.usb.gadget@1.2.vendor \
     android.hardware.gnss@1.0.vendor \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.0.vendor \
@@ -202,6 +206,12 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
+    android.hardware.power-V2-ndk \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    vendor.xiaomi.hardware.displayfeature@1.0 \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libexpat.vendor \
     libcurl.vendor \
     libpcap.vendor

@@ -53,6 +53,9 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup().replace_needed(
         "android.hardware.gnss-V1-ndk_platform.so", "android.hardware.gnss-V1-ndk.so"
     ),
+    "vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service": blob_fixup().replace_needed(
+        "android.hardware.power-V2-ndk_platform.so", "android.hardware.power-V2-ndk.so"
+    ),
     (
         "vendor/etc/init/hw/init.batterysecret.rc",
         "vendor/etc/init/hw/init.mi_thermald.rc",
