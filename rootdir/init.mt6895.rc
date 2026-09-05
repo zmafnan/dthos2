@@ -84,3 +84,9 @@ on post-fs-data
     mkdir /data/vendor/shading_otp 0771 root system
     mkdir /data/vendor/camera_dump 0771 root system
     chmod 0666 /dev/camlog
+
+# Disable AOSP rild; MediaTek uses mtkfusionrild
+service vendor.ril-daemon /vendor/bin/hw/rild
+    override
+    disabled
+
