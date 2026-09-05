@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
     libmediautils_vendor.vendor \
     libnbaio_mono \
     libtinycompress \
+    libalsautils-v31 \
+    libstagefright_foundation-v33 \
     audio.usb.default \
     android.hardware.bluetooth.audio-impl \
     MtkInCallService \
