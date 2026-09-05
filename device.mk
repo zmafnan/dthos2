@@ -118,16 +118,20 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.bluetooth.default \
     audio.r_submix.default \
+    libaudiofoundation.vendor \
+    libmediautils_vendor.vendor \
     libnbaio_mono \
+    libtinycompress \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     audio.usb.default \
     android.hardware.bluetooth.audio-impl \
     MtkInCallService \
-    android.hardware.gnss-V1-ndk
+    android.hardware.gnss-V1-ndk \
+    android.hardware.gnss-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
@@ -135,6 +139,9 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.common-V2-ndk.vendor \
+    android.hardware.common.fmq-V1-ndk.vendor \
+    android.hardware.graphics.common-V2-ndk.vendor \
     android.hardware.camera.provider@2.6.vendor \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.2.vendor \
@@ -145,6 +152,11 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge \
     libcamera_metadata.vendor
+
+# HOS2 sensor conversion and legacy Thread/String16 consumers
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-convert-shared.vendor \
+    libutils-v32
 
 # Wi-Fi
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
@@ -207,13 +219,23 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
     android.hardware.power-V2-ndk \
+    android.hardware.power-V2-ndk.vendor \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.1.vendor \
     android.hardware.media.c2@1.2.vendor \
     vendor.xiaomi.hardware.displayfeature@1.0 \
+    vendor.xiaomi.hardware.displayfeature@1.0.vendor \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_vndk.vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libavservices_minijail_vendor \
     libexpat.vendor \
     libcurl.vendor \
+    libssl.vendor \
     libpcap.vendor
 
 # Fingerprint / UDFPS

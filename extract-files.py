@@ -32,9 +32,21 @@ def lib_fixup_xiaomi_suffix(lib: str, partition: str, *args, **kwargs):
     return f"{lib}-xiaomi" if partition == "system_ext" else None
 
 
+def lib_fixup_mtk_prebuilt_interface(lib: str, partition: str, *args, **kwargs):
+    """Use existing HOS2 module names without selecting duplicate source HALs."""
+    return lib.replace("@", "_") if partition == "vendor" else None
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     ("libsink",): lib_fixup_xiaomi_suffix,
+    tuple(f"vendor.mediatek.hardware.pq@2.{minor}" for minor in range(16))
+    + (
+        "vendor.mediatek.hardware.audio@8.1",
+        "vendor.mediatek.hardware.bluetooth.audio@2.1",
+        "vendor.mediatek.hardware.bluetooth.audio@2.2",
+        "vendor.mediatek.hardware.mmagent@1.0",
+    ): lib_fixup_mtk_prebuilt_interface,
 }
 
 
@@ -53,9 +65,29 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup().replace_needed(
         "android.hardware.gnss-V1-ndk_platform.so", "android.hardware.gnss-V1-ndk.so"
     ),
-    "vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service": blob_fixup().replace_needed(
+    (
+        "vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service",
+        "vendor/lib64/android.hardware.power-service-mediatek.so",
+    ): blob_fixup().replace_needed(
         "android.hardware.power-V2-ndk_platform.so", "android.hardware.power-V2-ndk.so"
     ),
+    # Keep the frozen interface versions used by the HOS2 camera device blob.
+    "vendor/lib64/android.hardware.camera.device-V1-ndk_platform.so": blob_fixup()
+    .replace_needed("android.hardware.common-V2-ndk_platform.so", "android.hardware.common-V2-ndk.so")
+    .replace_needed("android.hardware.common.fmq-V1-ndk_platform.so", "android.hardware.common.fmq-V1-ndk.so")
+    .replace_needed("android.hardware.graphics.common-V2-ndk_platform.so", "android.hardware.graphics.common-V2-ndk.so"),
+    # These consumers create Android Threads before acquiring a strong reference.
+    (
+        "vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so",
+        "vendor/lib64/libaalservice.so",
+    ): blob_fixup()
+    .replace_needed("libutils.so", "libutils-v32.so")
+    .replace_needed("libsensorndkbridge.so", "android.hardware.sensors@1.0-convert-shared.so"),
+    "vendor/bin/mnld": blob_fixup().replace_needed(
+        "libsensorndkbridge.so", "android.hardware.sensors@1.0-convert-shared.so"
+    ),
+    # Load compatible String16 symbols before dlopening libmtk-ril/libmtkutils.
+    "vendor/bin/hw/mtkfusionrild": blob_fixup().add_needed("libutils-v32.so"),
     (
         "vendor/etc/init/hw/init.batterysecret.rc",
         "vendor/etc/init/hw/init.mi_thermald.rc",
