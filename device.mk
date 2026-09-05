@@ -403,7 +403,14 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/aristotle/aristotle-vendor.mk)
 
-# Filter out deprecated/broken vendor lights HAL inherited from aristotle-vendor.mk
-PRODUCT_PACKAGES := $(filter-out android.hardware.lights-service.mediatek,$(PRODUCT_PACKAGES))
-PRODUCT_COPY_FILES := $(filter-out %/lights-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-mtk-default.rc,$(PRODUCT_COPY_FILES))
+# USB
+$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.mediatek \
+    android.hardware.usb.gadget-service.mediatek
+
+# Filter out deprecated/broken vendor lights & USB HALs inherited from aristotle-vendor.mk
+PRODUCT_PACKAGES := $(filter-out android.hardware.lights-service.mediatek android.hardware.usb_1.2-service-mediatekv2,$(PRODUCT_PACKAGES))
+PRODUCT_COPY_FILES := $(filter-out %/lights-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-mtk-default.rc %/android.hardware.usb@1.2-service-mediatekv2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc,$(PRODUCT_COPY_FILES))
 

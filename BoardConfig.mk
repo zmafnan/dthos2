@@ -192,7 +192,6 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/vendor/manifest/fod.xml \
     $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/manifest_cameraprovider.xml \
-    $(DEVICE_PATH)/vintf/vendor/manifest/android.hardware.usb@1.2-service-mediatekv2.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml \
     $(DEVICE_PATH)/vintf/vendor/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 
