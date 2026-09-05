@@ -48,6 +48,12 @@ blob_fixups: blob_fixups_user_type = {
     .replace_needed("libcppbor_external.so", "libcppbor_external-v31.so")
     .replace_needed("libcppcose_rkp.so", "libcppcose_rkp-v31.so"),
     (
+        "vendor/bin/hw/android.hardware.gnss-service.mediatek",
+        "vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so",
+    ): blob_fixup().replace_needed(
+        "android.hardware.gnss-V1-ndk_platform.so", "android.hardware.gnss-V1-ndk.so"
+    ),
+    (
         "vendor/etc/init/hw/init.batterysecret.rc",
         "vendor/etc/init/hw/init.mi_thermald.rc",
     ): blob_fixup().regex_replace(".*seclabel.*\n", ""),

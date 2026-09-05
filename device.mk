@@ -117,9 +117,13 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     audio.primary.default \
     audio.bluetooth.default \
+    audio.r_submix.default \
+    libnbaio_mono \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor \
     audio.usb.default \
     android.hardware.bluetooth.audio-impl \
-    MtkInCallService
+    MtkInCallService \
+    android.hardware.gnss-V1-ndk
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
