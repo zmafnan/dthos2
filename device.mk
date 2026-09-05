@@ -176,7 +176,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
     android.hardware.bluetooth.audio@2.0.vendor \
     android.hardware.bluetooth.audio@2.1.vendor \
-    android.hardware.bluetooth.audio@2.2.vendor
+    android.hardware.bluetooth.audio@2.2.vendor \
+    libbt-vendor
 
 # Network & Radio
 PRODUCT_PACKAGES += \
@@ -369,8 +370,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.fingerprint.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6895.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(LOCAL_PATH)/rootdir/init.mt6895.power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6895.power.rc \
-    vendor/xiaomi/aristotle/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
-    vendor/xiaomi/aristotle/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/xiaomi/aristotle/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
