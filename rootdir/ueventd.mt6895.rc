@@ -66,6 +66,8 @@
 /dev/fm                   0660   media     media
 
 # NFC
+/dev/nq-nci              0660   nfc        nfc
+/dev/p73                 0660   nfc        nfc
 /dev/st21nfc              0660   nfc        radio
 /dev/st54spi              0660   secure_element        secure_element
 

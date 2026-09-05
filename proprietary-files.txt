@@ -124,7 +124,7 @@ vendor/bin/gbe
 vendor/bin/getgameserver
 vendor/bin/gsm0710muxd
 vendor/bin/headset_detect.sh
-vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
+#vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/bin/hw/android.hardware.drm@1.4-service.clearkey
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/bin/hw/android.hardware.dumpstate@1.1-service.xiaomi
@@ -151,7 +151,7 @@ vendor/bin/hw/vendor.mediatek.hardware.aee@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+#vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
@@ -596,7 +596,7 @@ vendor/etc/hrtf5c.bin
 vendor/etc/init.insmod.mt6895.cfg
 vendor/etc/init.panel_info.sh
 vendor/etc/init/aee_aedv64_v2.rc
-vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
+#vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/init/android.hardware.drm@1.4-service.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc
@@ -675,8 +675,8 @@ vendor/etc/init/vendor.mediatek.hardware.aee@1.1-service.rc;EXTRACT_ONLY
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc;EXTRACT_ONLY
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc;EXTRACT_ONLY
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc;EXTRACT_ONLY
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+#vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
+#vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -2571,3 +2571,7 @@ vendor/res/images/lcd_test_01.png
 vendor/res/images/lcd_test_02.png
 vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
+vendor/lib64/android.frameworks.displayservice@1.0.so
+vendor/lib64/libbt-vendor.so
+vendor/lib/libbt-vendor.so
+vendor/libnfc-nxp_RF.conf

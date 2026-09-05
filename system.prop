@@ -1,30 +1,56 @@
 # Xiaomi 13T Android 16 properties (system.prop)
-# Evidence: extracted/system/system/build.prop
-# Generated build identity/API properties are intentionally excluded.
+# Hardware Baseline: HyperOS 2 / MT6895 (Dimensity 8200 Ultra)
+# Organized modularly by subsystem for clean maintenance.
 
+# -----------------------------------------------------------------------------
+# Device & Hardware Identity
+# -----------------------------------------------------------------------------
 ro.product.marketname=Xiaomi 13T
 ro.infinity.soc=Dimensity 8200 Ultra
 ro.infinity.camera=50MP + 50MP + 12MP
+ro.infinity.battery=5000 mAh
+ro.mediatek.version.branch=alps-mp-b0.mssi1.tc8sp2
+ro.mediatek.version.release=alps-mp-b0.mp1.tc8sp2-V1
 
+# -----------------------------------------------------------------------------
+# Graphics & Render Engine
+# -----------------------------------------------------------------------------
+ro.opengles.version=196610
+
+# -----------------------------------------------------------------------------
+# Wi-Fi & Network Interfaces
+# -----------------------------------------------------------------------------
 wifi.interface=wlan0
+wifi.direct.interface=p2p0
+wifi.tethering.interface=ap0
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
-wifi.tethering.interface=ap0
-ro.opengles.version=196610
-wifi.direct.interface=p2p0
-ro.sys.usb.mtp.whql.enable=0
-sys.ipo.pwrdncap=2
-ro.sys.usb.storage.type=mtp
-ro.sys.usb.bicr=no
-ro.sys.usb.charging.only=yes
+
+# -----------------------------------------------------------------------------
+# Audio System
+# -----------------------------------------------------------------------------
 ro.audio.silent=0
-sys.ipo.disable=1
-ro.property_service.async_persist_writes=true
-vendor.camera.aux.packagelist=com.xiaomi.cameratest,com.xiaomi.factory.mmi,com.xiaomi.runin
-ro.mediatek.version.branch=alps-mp-b0.mssi1.tc8sp2
-ro.mediatek.version.release=alps-mp-b0.mp1.tc8sp2-V1
-ro.mediatek.version.build.branch=
 ro.audio.ihaladaptervendorextension_enabled=true
 ro.audio.usb.period_us=16000
 ro.audio.flinger_standbytime_ms=2000
+
+# -----------------------------------------------------------------------------
+# Camera Auxiliary Lens Allowlist
+# -----------------------------------------------------------------------------
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture,net.sourceforge.opencamera,com.google.android.GoogleCamera,com.xiaomi.cameratest,com.xiaomi.factory.mmi,com.xiaomi.runin
+
+# -----------------------------------------------------------------------------
+# USB & Storage Configuration
+# -----------------------------------------------------------------------------
+ro.sys.usb.storage.type=mtp
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+
+# -----------------------------------------------------------------------------
+# System Services & Performance
+# -----------------------------------------------------------------------------
+ro.property_service.async_persist_writes=true
+sys.ipo.disable=1
+sys.ipo.pwrdncap=2

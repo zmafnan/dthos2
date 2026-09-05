@@ -23,7 +23,7 @@
 
 #define COMMAND_FOD_PRESS_STATUS 1
 #define PARAM_FOD_PRESSED 1
-#define PARAM_FOD_RELEASED 1
+#define PARAM_FOD_RELEASED 0
 
 #define FOD_STATUS_OFF 0
 #define FOD_STATUS_ON 1
@@ -34,7 +34,7 @@
 #define TOUCH_IOC_SET_CUR_VALUE _IO(TOUCH_MAGIC, SET_CUR_VALUE)
 #define TOUCH_IOC_GET_CUR_VALUE _IO(TOUCH_MAGIC, GET_CUR_VALUE)
 
-#define DISP_PARAM_PATH "sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param"
+#define DISP_PARAM_PATH "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param"
 #define DISP_PARAM_LOCAL_HBM_MODE "9"
 #define DISP_PARAM_LOCAL_HBM_OFF "0"
 #define DISP_PARAM_LOCAL_HBM_ON "1"
@@ -119,9 +119,10 @@ class XiaomiMt6895UdfpsHandler : public UdfpsHandler {
         if (static_cast<AcquiredInfo>(result) == AcquiredInfo::GOOD) {
             setFingerDown(false);
             setFodStatus(FOD_STATUS_OFF);
-        } else if (vendorCode == 21 || vendorCode == 23) {
+        } else if (vendorCode == 21 || vendorCode == 22 || vendorCode == 23) {
             /*
              * vendorCode = 21 waiting for fingerprint authentication
+             * vendorCode = 22 finger down / touch detected
              * vendorCode = 23 waiting for fingerprint enroll
              */
             setFodStatus(FOD_STATUS_ON);
