@@ -82,7 +82,7 @@ ro.vendor.video_box.version=2
 ro.vendor.media.video.style.support=true
 ro.vendor.sdr2hdr.by.layer.support=true
 ro.vendor.regionpq.by.layer.support=false
-ro.vendor.mtk.pq.aidl=true
+ro.vendor.mtk.pq.aidl=false
 ro.vendor.mtk.pq.odm=true
 ro.vendor.mtk.pq.silky.brightness.enable=true
 
