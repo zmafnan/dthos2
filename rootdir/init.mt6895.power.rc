@@ -128,3 +128,7 @@ service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
     override
+
+service power-hal-1-0 /vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+    override
+    disabled
