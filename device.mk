@@ -369,7 +369,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.fingerprint.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6895.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(LOCAL_PATH)/rootdir/init.mt6895.power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6895.power.rc \
-    vendor/xiaomi/aristotle/proprietary/vendor/lib64/android.frameworks.displayservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.displayservice@1.0.so \
     vendor/xiaomi/aristotle/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/xiaomi/aristotle/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/xiaomi/aristotle/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf \

@@ -2571,7 +2571,6 @@ vendor/res/images/lcd_test_01.png
 vendor/res/images/lcd_test_02.png
 vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
-vendor/lib64/android.frameworks.displayservice@1.0.so
 vendor/lib64/libbt-vendor.so
 vendor/lib/libbt-vendor.so
 vendor/libnfc-nxp_RF.conf
