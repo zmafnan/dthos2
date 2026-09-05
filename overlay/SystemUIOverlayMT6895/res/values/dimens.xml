@@ -16,4 +16,10 @@
 
     <!-- UDFPS animation offset to align custom unlock animation center with sensor center (sensorRadius = 105px) -->
     <dimen name="udfps_animation_offset">105px</dimen>
+
+    <!-- Default paddings for content around the corners (insets battery and notif icons away from screen edges) -->
+    <dimen name="rounded_corner_content_padding">68px</dimen>
+
+    <!-- The padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">14px</dimen>
 </resources>
