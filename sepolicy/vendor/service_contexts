@@ -12,3 +12,6 @@ vendor.xiaomi.hw.touchfeature.ITouchFeature/default                     u:object
 
 # Displayfeature
 vendor.xiaomi.hardware.displayfeature_aidl.IDisplayFeature/default      u:object_r:vendor_hal_displayfeature_service:s0
+
+# Camera
+android.hardware.camera.provider.ICameraProvider/internal/1             u:object_r:hal_camera_service:s0

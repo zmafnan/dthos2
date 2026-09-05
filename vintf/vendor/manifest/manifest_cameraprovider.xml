@@ -4,6 +4,7 @@
         <version>1</version>
         <interface>
             <name>ICameraProvider</name>
+            <instance>internal/0</instance>
             <instance>internal/1</instance>
         </interface>
     </hal>
