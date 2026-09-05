@@ -45,7 +45,6 @@ vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera,net.sour
 # -----------------------------------------------------------------------------
 ro.sys.usb.storage.type=mtp
 ro.sys.usb.bicr=no
-ro.sys.usb.charging.only=yes
 ro.sys.usb.mtp.whql.enable=0
 
 # -----------------------------------------------------------------------------
